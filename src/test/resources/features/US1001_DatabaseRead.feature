@@ -1,4 +1,4 @@
-Feature: US1001 kullanici dogru bilgilerle database baglanabilir
+Feature: US1001 kullanici dogru bilgilerle database baglanabilmelidir
 
   @db
   Scenario: TC01 Kullanici database'deki bilgileri okur

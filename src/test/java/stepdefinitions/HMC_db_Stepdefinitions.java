@@ -31,26 +31,26 @@ public class HMC_db_Stepdefinitions {
         //
         resultSet.first();
         System.out.println(resultSet.getString("Price"));// 225.0000
-        resultSet.next(); // iterator'a benzer sekilde calisir
-        // next()'u imleci bir sonraki degerin yanina goturur
-        // bize true veya false doner
 
+        resultSet.next(); // iterator'a benzer sekilde calisir
+                          // next()'u imleci bir sonraki degerin yanina goturur
+                          // bize true veya false doner
         System.out.println(resultSet.getString("Price")); // 4000.0000
 
         System.out.println(resultSet.next()); // true
-
         System.out.println(resultSet.getString("Price")); // 445.0000
 
         // next() kullanilirken cok dikkatli olmaliyiz
         // cunku nerede olursa olsun imleci bir sonraki elemente gecirecektir.
+        // sout'un icinde de calisir
 
         System.out.println("===============Liste===============");
 
         resultSet.absolute(0);
-
         int sira=1;
+
         while(resultSet.next()){
-            System.out.println(sira+". kayt : " + resultSet.getString("Price"));
+            System.out.println(sira+". kayit : " + resultSet.getString("Price"));
             sira++;
         }
 
