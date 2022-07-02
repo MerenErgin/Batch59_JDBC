@@ -52,4 +52,11 @@ public class HMC_DBUtils_stepdefinitions {
         Assert.assertTrue(actualDeger==expectedDeger);
 
     }
+
+    @Then("tHOTEL tablosunda IDHotel degeri {int} olan kaydin Email bilgisini {string} yapar")
+    public void thotelTablosundaIDHotelDegeriOlanKaydinEmailBilgisiniYapar(int idHotel, String yeniEmail) {
+        String updateQuery= "update tHOTEL set Email='"+yeniEmail+"' where IDHotel="+idHotel+";";
+        DBUtils.executeQuery(updateQuery);
+
+    }
 }
